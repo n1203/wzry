@@ -34,4 +34,11 @@ module.exports = app => {
         req.Model = require(`../../models/${modelName}`)
         next()
     }, router)
+
+    const multer = require('multer')
+    const upload = multer({ dest: __dirname + '/../../uploads' })
+    app.post('/admin/api/upload', upload.single('file'), async (req, res) => {
+        req.file.url = `http://localhost:3000/uploads/${req.file.filename}`
+        res.send(req.file)
+    })
 }
