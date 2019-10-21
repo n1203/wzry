@@ -1,0 +1,30 @@
+/**index.wxss**/
+/* efefef */
+.container{
+    background: #efefef;
+    height: 100vh;
+}
+
+.fileUpload{
+    border: 5px dotted #e1e1e1;
+    text-align: center;
+    display: block;
+    width: 90%;
+    height: 5rem;
+    margin: 1.5rem auto;
+    background: #fff;
+    border-radius: 1rem;
+    padding:0 .5rem;
+}
+.fileUpload .fileicon{
+    font-size: 2rem;
+    display: inline;
+    line-height: 5rem;
+}
+.fileUpload .filetext{
+    line-height: 5rem;
+        transform: translateY(-12%);
+
+    display: inline-block;
+    margin-left: 1rem;
+}

@@ -1,0 +1,36 @@
+<view class="container">
+  <image src='http://yun1.e-spy.cn/mini_back2.png' style='width:100%;'></image>
+  <van-grid column-num="2">
+    <van-grid-item icon="printer" text="0.09元/页" dot />
+    <van-grid-item icon="alipay" text="账户剩余" info="99+" />
+  </van-grid>
+  <!-- <view class="fileUpload" wx-if="0">
+    <van-icon class="fileicon" name="add"></van-icon>
+    <text class="filetext">上传文件</text>
+  </view> -->
+  <van-cell-group>
+    <van-cell icon="expand-o" title="份数">
+      <van-stepper v-model="value" integer />
+    </van-cell>
+    <van-cell icon="expand-o" title="配送">
+      <switch style='zoom:.6;' color="#07c5e1" checked bindchange="switch1Change" />
+    </van-cell>
+    <van-cell icon="expand-o" title="地址选择">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">当前选择：{{array[index]}}</view>
+      </picker>
+    </van-cell>
+    <van-cell icon="expand-o" title="装钉">
+      <switch style='zoom:.6;' color="#07c5e1" checked bindchange="switch1Change" />
+    </van-cell>
+    <van-cell icon="expand-o" title="打印模式">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">当前选择：{{array[index]}}</view>
+      </picker>
+    </van-cell>
+  </van-cell-group>
+  <van-tabbar v-model="active" active-color="#fff" inactive-color="#000">
+    <van-tabbar-item icon="home-o" bindtap="backindex">返回首页</van-tabbar-item>
+    <van-tabbar-item icon="setting-o" style="background:#07c5e1;">提交订单</van-tabbar-item>
+  </van-tabbar>
+</view>

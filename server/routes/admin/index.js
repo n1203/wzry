@@ -3,7 +3,11 @@ module.exports = app => {
     const router = express.Router()
     const Category = require('../../models/Category')
     const Item = require('../../models/Item')
+    const System = require('../../models/System')
+    const config = require('../../plugins/config')
+
     router.post('/', async (req, res) => {
+        console.log(req.body)
         const model = await req.Model.create(req.body)
         res.send(model)
     })
@@ -35,10 +39,16 @@ module.exports = app => {
         next()
     }, router)
 
+    const MAO = require('multer-aliyun-oss');
     const multer = require('multer')
-    const upload = multer({ dest: __dirname + '/../../uploads' })
+    const upload = multer({
+        // dest: __dirname + '/../../uploads'
+        storage: MAO({
+            config: config.oss
+        })
+    })
     app.post('/admin/api/upload', upload.single('file'), async (req, res) => {
-        req.file.url = `http://localhost:3000/uploads/${req.file.filename}`
+        req.file.url = `${config.ossUrl}/${req.file.filename}`
         res.send(req.file)
     })
 }

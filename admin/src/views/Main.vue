@@ -17,6 +17,24 @@
             <el-menu-item index="/items/list">物品列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
+        <el-submenu index="2">
+          <template slot="title">
+            <i class="el-icon-message"></i>微信小程序
+          </template>
+          <el-menu-item-group>
+            <template slot="title">系统设置</template>
+            <el-menu-item index="/systems/edit">系统设置</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">校园博文</template>
+            <el-menu-item index="/users">博文列表</el-menu-item>
+            <el-menu-item index="/users">新增博文</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">用户</template>
+            <el-menu-item index="/users">用户列表</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
       </el-menu>
     </el-aside>
 

@@ -1,0 +1,51 @@
+/**index.wxss**/
+/* efefef */
+.container{
+    background: #efefef;
+}
+.askBox{
+    display: block;
+}
+.askItem{
+    background: #fff;
+    width: 100%;
+    height: auto;
+    padding: 1rem 5%;
+    margin: .5rem 0 0;
+    display: inline-block;
+}
+.askItem .askcol{
+    float: left;
+}
+.askcol h3{
+ font-weight: 900;
+ font-size: 1.2rem;
+ display: block;
+ width: 100%;line-height: 1.8rem;
+}
+.askcol span{
+    font-size: .8rem;
+    color: #555;
+    line-height: 1.2rem;
+}
+.usericon{
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid #d2f5fa;
+    border-radius: .5rem;
+}
+.zan{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    display: block;
+    text-align: right;
+    color: #555;
+}
+.zanle{
+    color: #07c5e1;
+}
+.askContant{
+    width: 100%;
+    float: left;
+    padding: .5rem 0;
+}
