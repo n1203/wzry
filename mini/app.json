@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/minedetile/minedetile",
     "pages/mine/mine",
-    "pages/zhao/zhao",
-    "pages/print/print"
+    "pages/print/print",
+    "pages/zhao/zhao"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

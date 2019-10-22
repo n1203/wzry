@@ -9,10 +9,9 @@
     border: 5px dotted #e1e1e1;
     text-align: center;
     display: block;
-    width: 90%;
-    height: 5rem;
+    width: 20rem;
+    height: 20rem;
     margin: 1.5rem auto;
-    background: #fff;
     border-radius: 1rem;
     padding:0 .5rem;
 }

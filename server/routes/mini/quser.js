@@ -105,16 +105,4 @@ exports.users = (req, res) => {
             })
         }
     })
-
-    console.log()
-    // const userData = req.body
-    // if (userData.userData) {
-    //     user.nickname = userData.userData.nickName;
-    //     user.headimgurl = userData.userData.avatarUrl;
-    //     user.gender = userData.userData.gender;
-    //     user.save();
-    // }
-    // const qdetile = new Qdetile();
-    // qdetile = req.body.udetile;
-    // qdetile.save()
 }

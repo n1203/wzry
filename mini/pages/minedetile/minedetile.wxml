@@ -1,0 +1,24 @@
+<!-- index.wxml -->
+<view class="container">
+  <van-cell title="手机号" is-link value="18879013921" />
+  <van-cell title="学号" is-link value="170201040119" />
+  <van-cell title="微信号" is-link value="px202020" />
+  <van-cell title="QQ" is-link value="1419673726" />
+  <van-cell title="宿舍" is-link>
+    <picker bindchange="addressBindPickerChange" value="{{addressIndex}}" range="{{addressArray}}">
+      <view class="picker">{{addressArray[addressIndex]}}</view>
+    </picker>
+  </van-cell>
+  <van-cell title="生日" is-link>
+    <picker mode="date" value="{{date}}" start="1990-09-01" end="2020-09-01" bindchange="bindDateChange">
+      <view class="picker">生日: {{date}}</view>
+    </picker>
+  </van-cell>
+  <van-cell title="入学年份" is-link value="2017" />
+  <van-cell title="院系" is-link value="信息工程学院" />
+  <van-cell title="班级" is-link value="17计算机网络技术" />
+  <van-cell title="个性签名" is-link value="非凡！" />
+  <button type="primary" class='saveButton' loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="saveBtnGo">
+    保存并返回
+  </button>
+</view>

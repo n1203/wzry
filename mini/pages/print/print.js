@@ -1,19 +1,76 @@
+const config = require('../../config/config');
 Page({
-    data: {
-        array: ['A4黑白单面', 'A4黑白双面'],
-        index: 0,
-        active: 1
-    },
-    bindPickerChange: function (e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
-        this.setData({
-            index: e.detail.value
+  data: {
+    file_url: '',
+    //地址列表
+    addressArray: ['西1', '西2'],
+    // 地址列表默认项
+    addressIndex: 0,
+    // 打印模式列表
+    printArray: ['A4黑白单面', 'A4黑白双面'],
+    // 打印模式默认项
+    printIndex: 0,
+    // 底部tabbar avtive项
+    active: 1,
+    // 打印数目
+    printNum: 1,
+    // 是否需要配送服务
+    sendServer: true,
+    // 是否需要装钉
+    dingServer: true
+  },
+  upload: function () {
+    wx.chooseMessageFile({
+      count: 1, // 默认9
+      success(e) {
+        wx.uploadFile({
+          url: `${config.api}/upload`,
+          filePath: e.tempFiles[0].path,
+          name: 'pdf',
+          success(res) {
+            const data = res.data
+            //do something
+          }
         })
-    },
-    backindex: function () {
-        console.log("a")
-        wx.navigateBack({
-            delta: 1
-        })
-    }
+      }
+    })
+  },
+  //地址选择器
+  addressBindPickerChange: function (e) {
+    this.setData({
+      addressIndex: e.detail.value
+    })
+  },
+  //打印模式选择器
+  printBindPickerChange: function (e) {
+    this.setData({
+      printIndex: e.detail.value
+    })
+  },
+  // 打印页数设置
+  printNumChange: function (e) {
+    this.setData({
+      printNum: e.detail
+    });
+  },
+  // 配送服务
+  sendChange: function (e) {
+    this.setData({
+      sendServer: e.detail.value
+    });
+  },
+  // 装钉服务
+  dingChange: function (e) {
+    this.setData({
+      dingServer: e.detail.value
+    });
+  },
+  //返回首页
+  backindex: function () {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  orderCount: function () {
+  }
 })

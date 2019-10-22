@@ -171,4 +171,10 @@ Page({
       console.log(e);
     }
   },
+
+  userSetting(){
+    wx.navigateTo({
+      url: `/pages/minedetile/minedetile`
+    })
+  }
 })

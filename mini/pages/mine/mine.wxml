@@ -12,7 +12,9 @@
     </view>
   </view>
   <button wx:if="{{test==false}}" open-type="getUserInfo" lang="zh_CN" vx:if="" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
-  <van-cell title="个人资料" is-link />
+  <van-cell title="个人资料" is-link bindtap="userSetting" />
+  <van-cell title="查看打印订单" is-link />
+  <van-cell title="剩余打印余额" is-link value="18" />
   <van-cell title="关于我们" is-link value="快点科技" />
   <van-cell title="问题反馈" is-link />
   <van-cell title="版本号" is-link value="V1.0.1" />

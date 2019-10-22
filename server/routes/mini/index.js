@@ -13,6 +13,21 @@ module.exports = app => {
         const model = await req.Model.create(req.body)
         res.send(model)
     })
+
+    const config = require('../../plugins/config')
+    const MAO = require('multer-aliyun-oss');
+    const multer = require('multer')
+    const upload = multer({
+        // dest: __dirname + '/../../uploads'
+        storage: MAO({
+            config: config.oss
+        })
+    })
+    app.post('/mini/api/upload', async (req, res) => {
+        console.log(req)
+        // req.file.url = `${config.ossUrl}/${req.file.filename}`
+        // res.json(req.file)
+    })
     app.use('/mini/api/', async (req, res, next) => {
         next()
     }, router)
