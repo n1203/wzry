@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
+    "pages/zhao/zhao",
     "pages/print/print"
   ],
   "window": {

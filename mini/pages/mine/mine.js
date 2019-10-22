@@ -26,7 +26,40 @@ Page({
       console.log(e);
     }
   },
-
+  onGotUserInfo:function(e){
+    var userinfo = JSON.parse(e.detail.rawData)
+    wx.setStorageSync('userinfo', userinfo)
+    if (e) {
+      getApp().updataUsers(e).then((res)=>{
+        this.setData({
+          test: true,
+          userInfo: wx.getStorageSync('user'),
+        })
+      })
+    }
+  },
+  getUserInfo: function () {
+    console.log('userinfo')
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.record']) {
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success() {
+              // 用户已经同意小程序获取用户数据，
+              // 必须是在用户已经授权的情况下调用
+              wx.getUserInfo({
+                success: function (res) {
+                  var userInfo = res.userInfo
+                  console.log(userInfo)
+                }
+              })
+            }
+          })
+        }
+      }
+    })
+  },
   login: function () {
     let that = this
     console.log('login~~~');
@@ -85,7 +118,27 @@ Page({
       }
     })
   },
-
+  getuser: function () {
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.record']) {
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success() {
+              // 用户已经同意小程序获取用户数据，
+              // 必须是在用户已经授权的情况下调用
+              wx.getUserInfo({
+                success: function (res) {
+                  var userInfo = res.userInfo
+                  console.log(userInfo)
+                }
+              })
+            }
+          })
+        }
+      }
+    })
+  },
   //登录：获取token
   reLogin: function () {
     getApp().logIn()

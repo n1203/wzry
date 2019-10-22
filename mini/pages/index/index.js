@@ -23,11 +23,15 @@ Page({
     }
   },
     goooo: function (a) {
-        console.log('a')
         wx.navigateTo({
-            url: '/pages/print/print'
+          url: `/pages/print/print`
         })
-    }
+    },
+  zhao: function (a) {
+    wx.navigateTo({
+      url: `/pages/zhao/zhao`
+    })
+  }
      
 
 })

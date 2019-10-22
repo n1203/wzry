@@ -29,26 +29,21 @@ exports.login = (req, res) => {
         .then(response => {
             User.findOne({ openId: response.data.openid }, (err, user) => {
                 if (user) {
-                    // user.nickname = userData.nickName;
-                    // user.headimgurl = userData.avatarUrl;
-                    // user.gender = userData.gender;
-                    // user.save();
                     console.log(user)
-
                     return res.json({
-                        token: generateToken({ openid: response.data.openid })
+                        token: generateToken({ openid: response.data.openid }),
+                        openid: response.data.openid
                     })
                 } else {
                     const user = new User();
                     user.openId = response.data.openid;
-                    // user.nickname = userData.nickName;
-                    // user.headimgurl = userData.avatarUrl;
-                    // user.gender = userData.gender;
                     user.save();
                     return res.json({
                         token: generateToken({
                             openid: response.data.openid
-                        })
+                        }),
+                        openid: response.data.openid
+
                     })
                 }
             })
@@ -78,6 +73,7 @@ exports.checkToken = (req, res, next) => {
                 if (decoded.openid) {
                     req.openid = decoded.openid;
                     console.log('req.openid = decoded.openid;');
+                    const wxAPI2 = `https://api.weixin.qq.com/wxa/getpaidunionid?access_token=ACCESS_TOKEN&openid=OPENID`
                     return res.status(200).json({ message: '已登录' });
                 } else {
                     console.log('认证失败！');
@@ -96,7 +92,29 @@ exports.checkToken = (req, res, next) => {
 
 // 用户个人资料
 exports.users = (req, res) => {
-    const qdetile = new Qdetile();
-    qdetile = req.body.udetile;
-    qdetile.save()
+    const userData = req.body.userData.detail.userInfo
+    const openid = req.body.openid
+    User.findOne({ openId: openid }, (err, user) => {
+        if (user) {
+            user.nickname = userData.nickName;
+            user.headimgurl = userData.avatarUrl;
+            user.gender = userData.gender;
+            user.save();
+            return res.json({
+                user
+            })
+        }
+    })
+
+    console.log()
+    // const userData = req.body
+    // if (userData.userData) {
+    //     user.nickname = userData.userData.nickName;
+    //     user.headimgurl = userData.userData.avatarUrl;
+    //     user.gender = userData.userData.gender;
+    //     user.save();
+    // }
+    // const qdetile = new Qdetile();
+    // qdetile = req.body.udetile;
+    // qdetile.save()
 }

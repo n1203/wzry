@@ -27,8 +27,11 @@ App({
                     'content-type': 'application/json'
                   },
                   success: function (res) {
-                    console.log(res.data.token)
+                    console.log(res.data)
                     wx.setStorageSync('token', res.data.token)
+                    if (res.data.openid!=''){
+                      wx.setStorageSync('openid', res.data.openid)
+                    }
                     resolve(res)
                   }
                 })
@@ -40,6 +43,27 @@ App({
       });
     })
     
+  },
+  updataUsers:function(e){
+    const openid = wx.getStorageSync('openid')
+    return new Promise(function (resolve, reject) {
+    wx.request({
+      url: `${config.api}/users`,
+      method: 'POST',
+      data: {
+        userData: e,
+        openid: openid
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        wx.setStorageSync('user', res.data.user)
+        console.log(res.data)
+        resolve(res)
+      }
+    })
+    })
   },
   getdata: function () {
     var that = this;

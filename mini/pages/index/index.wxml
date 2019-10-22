@@ -4,7 +4,7 @@
   <van-grid border='false' style="border-radius:1rem;">
     <van-grid-item icon="printer" text="在线打印" bindtap="goooo" />
     <van-grid-item icon="alipay" text="余额充值" />
-    <van-grid-item icon="invition" text="招贤纳士" />
+    <van-grid-item icon="invition" text="招贤纳士" bindtap="zhao"/>
     <van-grid-item icon="service" text="联系客服" />
   </van-grid>
   <view class='askBox'>

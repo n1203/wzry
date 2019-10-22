@@ -7,6 +7,7 @@ module.exports = app => {
     router.get('/', qusers.now)
     //换取token
     router.post('/login', qusers.login)
+    router.post('/users', qusers.users)
     //初始化用户资料
     router.post('/user', qusers.checkToken, async (req, res) => {
         const model = await req.Model.create(req.body)
