@@ -1,6 +1,6 @@
 # 课时进度
 
--[√]P1node-vue-moba-1-1-项目介绍
+-[√] P1node-vue-moba-1-1-项目介绍
 -[√]P2node-vue-moba-1-2-工具安装和环境搭建
 -[√]P3node-vue-moba-1-3-初始化项目
 -[√]P4node-vue-moba-2-1-基于Element UI的后台管理基础界面搭建
