@@ -31,6 +31,7 @@ App({
                     wx.setStorageSync('token', res.data.token)
                     if (res.data.openid!=''){
                       wx.setStorageSync('openid', res.data.openid)
+                      wx.setStorageSync('userid', res.data.id)
                     }
                     resolve(res)
                   }

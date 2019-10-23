@@ -1,0 +1,111 @@
+/**contactUS.wxss**/
+/* @import "../Iconfont/iconfont.wxss"; */
+
+/* 导航栏样式 */
+.home-page{
+  position: fixed;
+  height: 140rpx;
+  width: 100%;
+  background-color: #EAC100;
+  z-index: 9999;
+}
+.navbar-relation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 180rpx;
+  font-size: 36rpx;
+}
+.icon-fanhui{
+  position: absolute;
+  left: 2%;
+  top: 65%;
+  transform: translate(-2%,-50%);
+  font-weight: bold;
+}
+
+/* contactUS页面样式 */
+#body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #E0E0E0;
+}
+.box{
+  position: relative;
+  width:88vw;
+  /* height: 36vh; */
+  top: 170rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.box2{
+  position: relative;
+  width:88vw;
+  /* height: 39vh; */
+  margin: 200rpx auto;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.box1-service{
+ position: relative;
+ left: 50%;
+ text-align: center;
+ transform: translate(-50%);
+ padding-top: 28rpx;
+}
+.service{
+  font-size: 18px;
+  margin: 10rpx 0 10rpx 0;
+  font-weight: 500;
+  color: indigo;
+  opacity: 0.6;
+}
+.box1-register{
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  padding: 40rpx 40rpx;
+}
+.box2-register{
+  position: relative;
+  margin: 40rpx 40rpx;
+}
+.register{
+  font-size: 16px;
+}
+.box1-phone{
+  position: relative;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  margin:10rpx 0 50rpx 0;
+}
+.phone{
+  font-size: 16px;
+}
+.box1-immediately{
+  position: relative;
+  width: 520rpx;
+  border-radius: 50rpx;
+  background-color: #EAC100;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  margin: 40rpx 0;
+}
+.box2-immediately_copy{
+  position: relative;
+  width: 520rpx;
+  border-radius: 50rpx;
+  background-color: #EAC100;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  margin: 40rpx 0;
+}
+.button{
+  padding: 0 0 3rpx 0;
+}

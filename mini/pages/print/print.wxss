@@ -4,13 +4,21 @@
     background: #efefef;
     height: 100vh;
 }
-
+.tipsText{
+  color: #555;
+  font-size: .8rem;
+  display: block;
+  padding:0 1.5rem 1.5rem;
+}
+.fileUploadBlock{
+  padding-top: 1.5rem;
+}
 .fileUpload{
     border: 5px dotted #e1e1e1;
     text-align: center;
     display: block;
     width: 20rem;
-    height: 20rem;
+    height: 16rem;
     margin: 1.5rem auto;
     border-radius: 1rem;
     padding:0 .5rem;

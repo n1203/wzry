@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/print/print",
+    "pages/about/about",    
     "pages/minedetile/minedetile",
     "pages/mine/mine",
-    "pages/print/print",
+   
+    "pages/contactUS/contactUS",    
+    "pages/payment/payment",
     "pages/zhao/zhao"
     
   ],

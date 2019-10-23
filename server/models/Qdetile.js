@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema(
     {
-        //父级id
+        //父级用户id
         parent: { type: mongoose.SchemaTypes.ObjectId, ref: 'Quser' },
         //用户基本信息
         phone: { type: String },        //用户手机号

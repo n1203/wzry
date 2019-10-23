@@ -32,7 +32,8 @@ exports.login = (req, res) => {
                     console.log(user)
                     return res.json({
                         token: generateToken({ openid: response.data.openid }),
-                        openid: response.data.openid
+                        openid: response.data.openid,
+                        id: user._id
                     })
                 } else {
                     const user = new User();
@@ -40,10 +41,10 @@ exports.login = (req, res) => {
                     user.save();
                     return res.json({
                         token: generateToken({
-                            openid: response.data.openid
+                            openid: response.data.openid,
                         }),
-                        openid: response.data.openid
-
+                        openid: response.data.openid,
+                        id: user._id
                     })
                 }
             })

@@ -19,17 +19,31 @@ Page({
     // 是否需要装钉
     dingServer: true
   },
+  onLoad: function () {
+    const value = wx.getStorageSync('userid')
+    this.setData({ userid: value })
+  },
   upload: function () {
+    let that = this
     wx.chooseMessageFile({
       count: 1, // 默认9
+      type: 'file',
       success(e) {
         wx.uploadFile({
           url: `${config.api}/upload`,
           filePath: e.tempFiles[0].path,
           name: 'pdf',
+          formData:{
+            _id: that.data.userid
+          },
           success(res) {
-            const data = res.data
-            //do something
+            const data = JSON.parse(res.data)
+            that.setData({
+              file_url: data.url,
+              filename: data.filename,
+              mimetype: data.mimetype,
+              encoding: data.encoding,
+            })
           }
         })
       }

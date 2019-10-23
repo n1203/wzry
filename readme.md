@@ -13,9 +13,9 @@
 - [x] P11node-vue-moba-2-7-通用CRUD接口
 - [x] P12node-vue-moba-2-8-装备(物品)管理
 - [x] P13node-vue-moba-2-9-图片上传
-- [ ] P14node-vue-moba-2-10-英雄管理
-- [ ] P15node-vue-moba-2-11-1-英雄编辑【模型字段】
-- [ ] P16node-vue-moba-2-11-2-英雄编辑【编辑表单】
+- [x] P14node-vue-moba-2-10-英雄管理
+- [x] P15node-vue-moba-2-11-1-英雄编辑【模型字段】
+- [x] P16node-vue-moba-2-11-2-英雄编辑【编辑表单】
 - [ ] P17node-vue-moba-2-12-1-技能编辑【UI】
 - [ ] P18node-vue-moba-2-12-2-技能编辑【交互】
 - [ ] P19node-vue-moba-2-13-文章管理
@@ -30,4 +30,4 @@
 - [ ] P28node-vue-moba-2-19-服务端登录校验(assert)
 - [ ] P29node-vue-moba-2-19-服务端登录校验(中间件)
 - [ ] P30node-vue-moba-2-20-客户端路由限制(beforeEach, meta)
-- [ ] P312.21-上传文件的登录校验 (el-upload, headers)
+- [ ] P3 12.21-上传文件的登录校验 (el-upload, headers)

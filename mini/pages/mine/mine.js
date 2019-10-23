@@ -176,5 +176,10 @@ Page({
     wx.navigateTo({
       url: `/pages/minedetile/minedetile`
     })
+  },
+  about(){
+    wx.navigateTo({
+      url: `/pages/about/about`
+    })
   }
 })

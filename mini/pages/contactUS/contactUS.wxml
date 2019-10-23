@@ -1,0 +1,40 @@
+<!--contactUS.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='home-page' style='margin-top: {{height}}px'>
+  <h4 class="navbar-relation">联系我们</h4>
+  <view class="iconfont icon-fanhui" style="font-size:36rpx;"></view>
+</view>
+
+<view id="body">
+     <!-- 服务热线 -->
+   <view class="box">
+    <view class="box1-service">
+      <h4 class="service">服务热线</h4>
+     </view>
+    <view class="box1-register"> 
+      <p class="register">注册咨询/软件使用咨询等问题处理</p>
+    </view>
+    <view class="box1-phone">
+       <label class="phone">+86 12345678912</label>
+    </view>
+    <view class="button">
+       <button class="box1-immediately">立即拨打</button>
+    </view>
+  </view>
+     <!-- 我们的邮箱 -->
+   <view class="box2">
+    <view class="box1-service">
+      <h4 class="service">我们的邮箱</h4>
+     </view>
+    <view class="box2-register"> 
+      <p class="register">补充资料、投诉与建议、变更账户信息、争议处理等问题处理</p>
+    </view>
+    <view class="box1-phone">
+       <label class="phone">123456789@234.com</label>
+    </view>
+    <view class="button">
+       <button type="button" class="box2-immediately_copy">复制</button>
+    </view>
+  </view>
+</view>

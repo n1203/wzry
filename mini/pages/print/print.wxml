@@ -4,9 +4,12 @@
     <van-grid-item icon="printer" text="0.09元/页" dot />
     <van-grid-item icon="alipay" text="账户剩余" info="99+" />
   </van-grid>
-  <view class="fileUpload" wx-if="0" bind:tap="upload">
+  <view class="fileUpload" wx-if="{{!file_url}}" bind:tap="upload">
+    <view class='fileUploadBlock'>
     <van-icon class="fileicon" name="add"></van-icon>
     <text class="filetext">上传文件</text>
+    </view>
+    <text class='tipsText'>提示：上传的文件最好是PDF格式，这样打印出来就是您当前预览的样式，不容易出错！要是上传的是word文档或者图片类型，都可能出现排版问题，希望大家将文件转换为PDF再上传哦！大批量以及需要改稿服务的可以联系我们的客服一对一处理！</text>
   </view>
   <van-cell-group wx:if="{{file_url}}">
     <van-cell icon="expand-o" title="份数">

@@ -2,6 +2,7 @@ module.exports = app => {
     const express = require('express')
     const router = express.Router()
     const qusers = require('./quser')
+    const Print = require('../../models/Print')
     //检测token是否过期
     router.post('/auth', qusers.checkToken)
     router.get('/', qusers.now)
@@ -23,10 +24,13 @@ module.exports = app => {
             config: config.oss
         })
     })
-    app.post('/mini/api/upload', async (req, res) => {
-        console.log(req)
-        // req.file.url = `${config.ossUrl}/${req.file.filename}`
-        // res.json(req.file)
+    app.post('/mini/api/upload', upload.single('pdf'), async (req, res) => {
+        req.file.parent = req.body._id
+        req.file.url = `${config.ossUrl}/${req.file.filename}`
+        const model = await Print.create(req.file)
+        // const model = await Print.find().setOptions('parent').limit(10)
+        console.log(model)
+        return res.json(model)
     })
     app.use('/mini/api/', async (req, res, next) => {
         next()

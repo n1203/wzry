@@ -8,7 +8,8 @@ import ItemEdit from './views/ItemEdit.vue'
 import ItemList from './views/ItemList.vue'
 import UserList from './views/UserList.vue'
 import systemEdit from './views/systemEdit.vue'
-
+import HeroList from './views/HeroList.vue'
+import HeroEdit from './views/HeroEdit.vue'
 
 Vue.use(Router)
 
@@ -27,10 +28,11 @@ export default new Router({
         { path: '/items/create', component: ItemEdit },
         { path: '/items/edit/:id', component: ItemEdit, props: true },
         { path: '/items/list', component: ItemList },
-
+        { path: '/heroes/create', component: HeroEdit },
+        { path: '/heroes/list', component: HeroList },
+        { path: '/heroes/edit/:id', component: HeroEdit, props: true },
         { path: '/users', component: UserList },
         { path: '/systems/edit', component: systemEdit }
-
       ]
     }
   ]
