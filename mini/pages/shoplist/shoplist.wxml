@@ -1,0 +1,32 @@
+<view class="continer">
+  <view class="shopItem">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/2zGClHFjNiazQeKHQOzvezlQoogrGKmR2iaLgpVR3StFZanibvLcGSJXocJ7Ejhbwia694NhhAkg440DCPvV1mfDJA/132"></image>
+    <view class="shop_r">
+      <h2>唐装汉服 齐腰汉服白菜全套山海经饕餮桃</h2>
+      <view class="Pay">
+        <text class="price">￥88</text>
+        <text class="buys">19991人付款</text>
+      </view>
+    </view>
+  </view>
+  <view class="shopItem">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/2zGClHFjNiazQeKHQOzvezlQoogrGKmR2iaLgpVR3StFZanibvLcGSJXocJ7Ejhbwia694NhhAkg440DCPvV1mfDJA/132"></image>
+    <view class="shop_r">
+      <h2>唐装汉服 齐腰汉服白菜全套山海经饕餮桃</h2>
+      <view class="Pay">
+        <text class="price">￥88</text>
+        <text class="buys">19991人付款</text>
+      </view>
+    </view>
+  </view>
+  <view class="shopItem">
+    <image src="https://wx.qlogo.cn/mmopen/vi_32/2zGClHFjNiazQeKHQOzvezlQoogrGKmR2iaLgpVR3StFZanibvLcGSJXocJ7Ejhbwia694NhhAkg440DCPvV1mfDJA/132"></image>
+    <view class="shop_r">
+      <h2>唐装汉服 齐腰汉服白菜全套山海经饕餮桃</h2>
+      <view class="Pay">
+        <text class="price">￥88</text>
+        <text class="buys">19991人付款</text>
+      </view>
+    </view>
+  </view>
+</view>

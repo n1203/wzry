@@ -1,11 +1,13 @@
+// 模块引入
+const axios = require('axios')
 const jwt = require('jsonwebtoken')
+// 配置信息
+const config = require('../../plugins/config')
+// 数据库模型
 const User = require('../../models/Quser')
 const Qdetile = require('../../models/Qdetile')
 const System = require('../../models/System')
-
-const config = require('../../plugins/config')
-const axios = require('axios')
-
+// 设置jwt
 let generateToken = function (user) {
     return jwt.sign(user, config.jwtSecret, {
         expiresIn: 7200
@@ -19,12 +21,10 @@ exports.now = async (req, res) => {
         model
     })
 }
-
+//小程序用户登录
 exports.login = (req, res) => {
-    // const userData = JSON.parse(req.body.rawdata)
     const queryString = `appid=${config.appId}&secret=${config.appSecret}&js_code=${req.body.code}&grant_type=authorization_code`;
     const wxAPI = `https://api.weixin.qq.com/sns/jscode2session?${queryString}`;
-    // https://api.q.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
     axios.get(wxAPI)
         .then(response => {
             User.findOne({ openId: response.data.openid }, (err, user) => {
@@ -53,7 +53,7 @@ exports.login = (req, res) => {
             console.log(error)
         })
 }
-
+//登录token校验
 exports.checkToken = (req, res, next) => {
     let token = req.headers.authorization;
     console.log(token);
@@ -89,9 +89,7 @@ exports.checkToken = (req, res, next) => {
         });
     }
 }
-
-
-// 用户个人资料
+// 用户个人资料更新
 exports.users = (req, res) => {
     const userData = req.body.userData.detail.userInfo
     const openid = req.body.openid

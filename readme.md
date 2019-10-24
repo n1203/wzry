@@ -16,8 +16,8 @@
 - [x] P14node-vue-moba-2-10-英雄管理
 - [x] P15node-vue-moba-2-11-1-英雄编辑【模型字段】
 - [x] P16node-vue-moba-2-11-2-英雄编辑【编辑表单】
-- [ ] P17node-vue-moba-2-12-1-技能编辑【UI】
-- [ ] P18node-vue-moba-2-12-2-技能编辑【交互】
+- [x] P17node-vue-moba-2-12-1-技能编辑【UI】
+- [x] P18node-vue-moba-2-12-2-技能编辑【交互】
 - [ ] P19node-vue-moba-2-13-文章管理
 - [ ] P20node-vue-moba-2-14-1-富文本编辑器(quill)
 - [ ] P21node-vue-moba-2-14-2-富文本编辑器【图片上传】(quill)

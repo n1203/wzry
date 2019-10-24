@@ -16,7 +16,7 @@ Page({
   //检测onlunch时是否成功取得用户信息
   onShow: function () {
     try {
-      var userInfo = wx.getStorageSync('user')
+      var userInfo = wx.getStorageSync('openid')
       if (userInfo) {
         this.setData({
           test: true,

@@ -39,6 +39,10 @@
             <template slot="title">用户</template>
             <el-menu-item index="/users">用户列表</el-menu-item>
           </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">文件</template>
+            <el-menu-item index="/prints">上传文件列表</el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
       </el-menu>
     </el-aside>

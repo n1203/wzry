@@ -26,6 +26,7 @@ module.exports = app => {
     })
     app.post('/mini/api/upload', upload.single('pdf'), async (req, res) => {
         req.file.parent = req.body._id
+        req.file.originalname = req.body.name
         req.file.url = `${config.ossUrl}/${req.file.filename}`
         const model = await Print.create(req.file)
         // const model = await Print.find().setOptions('parent').limit(10)

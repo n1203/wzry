@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    
+    "pages/shoplist/shoplist",
     "pages/print/print",
     "pages/about/about",    
     "pages/minedetile/minedetile",

@@ -34,7 +34,8 @@ Page({
           filePath: e.tempFiles[0].path,
           name: 'pdf',
           formData:{
-            _id: that.data.userid
+            _id: that.data.userid,
+            name: e.tempFiles[0].name
           },
           success(res) {
             const data = JSON.parse(res.data)

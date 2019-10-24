@@ -7,6 +7,7 @@ import CategoryList from './views/CategoryList.vue'
 import ItemEdit from './views/ItemEdit.vue'
 import ItemList from './views/ItemList.vue'
 import UserList from './views/UserList.vue'
+import PrintList from './views/PrintList.vue'
 import systemEdit from './views/systemEdit.vue'
 import HeroList from './views/HeroList.vue'
 import HeroEdit from './views/HeroEdit.vue'
@@ -32,6 +33,7 @@ export default new Router({
         { path: '/heroes/list', component: HeroList },
         { path: '/heroes/edit/:id', component: HeroEdit, props: true },
         { path: '/users', component: UserList },
+        { path: '/prints', component: PrintList },
         { path: '/systems/edit', component: systemEdit }
       ]
     }

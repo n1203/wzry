@@ -1,0 +1,39 @@
+.continer{
+  padding: 1rem;
+}
+.continer .shopItem{
+  box-shadow: 0 0 10px #f9f9f9;
+  float: left;
+  width: 100%;
+  margin-bottom:1rem; 
+}
+.continer .shopItem image{
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: .5;
+}
+ .shop_r{
+   height: 100px;
+  padding: .5rem;
+  line-height: 1.5rem;
+  position: relative;
+}
+.shop_r h2{
+  font-size: .9rem;
+  font-weight: 500;
+}
+.Pay{
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+}
+.price{
+  color: #f60;
+  font-size: 1.3rem;
+}
+.buys{
+  font-size: .8rem;
+  color: #555;
+  padding-left: 1rem;
+}

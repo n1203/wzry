@@ -23,10 +23,10 @@ module.exports = app => {
     })
     router.get('/', async (req, res) => {
         const queryOptions = {}
-        if (req.Model.modelName == 'Category') {
+        if (req.Model.modelName == 'Category' || req.Model.modelName == 'Print') {
             queryOptions.populate = 'parent'
         }
-        const model = await req.Model.find().setOptions(queryOptions).limit(10)
+        const model = await req.Model.find().sort({ createdAt: -1 }).setOptions(queryOptions).limit(10)
         res.send(model)
     })
     router.get('/:id', async (req, res) => {
