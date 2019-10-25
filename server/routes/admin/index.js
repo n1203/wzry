@@ -4,8 +4,10 @@ module.exports = app => {
     const Category = require('../../models/Category')
     const Item = require('../../models/Item')
     const System = require('../../models/System')
+    const Guosystem = require('../../models/Guosystem')
+    const Guoorder = require('../../models/Guoorder')
+    const Quser = require('../../models/Quser')
     const config = require('../../plugins/config')
-
     router.post('/', async (req, res) => {
         console.log(req.body)
         const model = await req.Model.create(req.body)
@@ -35,6 +37,7 @@ module.exports = app => {
     })
     app.use('/admin/api/rest/:resource', async (req, res, next) => {
         const modelName = require('inflection').classify(req.params.resource)
+        console.log(modelName)
         req.Model = require(`../../models/${modelName}`)
         next()
     }, router)
@@ -46,6 +49,12 @@ module.exports = app => {
         storage: MAO({
             config: config.oss
         })
+    })
+    app.post('/admin/api/carsh/:id', async (req, res) => {
+        const old = await Quser.findById(req.body.id)
+        req.body.guoguo += old.guoguo
+        const model = await Quser.findByIdAndUpdate(req.body.id, req.body)
+        res.send(model)
     })
     app.post('/admin/api/upload', upload.single('file'), async (req, res) => {
         req.file.url = `${config.ossUrl}/${req.file.filename}`

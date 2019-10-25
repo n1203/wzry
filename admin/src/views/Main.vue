@@ -1,7 +1,10 @@
 <template>
   <el-container style="height: 100vh;">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu router :default-openeds="['1', '3']">
+      <el-menu router :default-openeds="['2','4']">
+        <el-submenu index="0">
+          <template slot="logo">快递科技管理系统</template>
+        </el-submenu>
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-message"></i>内容管理
@@ -22,9 +25,20 @@
             <el-menu-item index="/heroes/list">英雄列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
+
         <el-submenu index="2">
           <template slot="title">
-            <i class="el-icon-message"></i>微信小程序
+            <i class="el-icon-message"></i>用户管理
+          </template>
+          <el-menu-item-group>
+            <template slot="title">用户</template>
+            <el-menu-item index="/users">用户列表</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+
+        <el-submenu index="3">
+          <template slot="title">
+            <i class="el-icon-message"></i>在线打印小程序
           </template>
           <el-menu-item-group>
             <template slot="title">系统设置</template>
@@ -36,12 +50,38 @@
             <el-menu-item index="/users">新增博文</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group>
-            <template slot="title">用户</template>
-            <el-menu-item index="/users">用户列表</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group>
             <template slot="title">文件</template>
             <el-menu-item index="/prints">上传文件列表</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+
+        <el-submenu index="4">
+          <template slot="title">
+            <i class="el-icon-message"></i>景院裹裹小程序
+          </template>
+          <el-menu-item-group>
+            <template slot="title">系统设置</template>
+            <el-menu-item index="/guosystems/edit">系统设置</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">裹裹</template>
+            <el-menu-item index="/guoorders/list">裹裹列表</el-menu-item>
+            <el-menu-item index="/guoorders/edit">新增裹裹</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">裹派</template>
+            <el-menu-item index="/guomans/list">裹派列表</el-menu-item>
+            <el-menu-item index="/guomans/edit">新增裹派</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">快递公司</template>
+            <el-menu-item index="/guopostincs/edit">新增快递公司</el-menu-item>
+            <el-menu-item index="/guopostincs/list">快递公司列表</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">广告管理</template>
+            <el-menu-item index="/guoadvertises/edit">新增广告</el-menu-item>
+            <el-menu-item index="/guoadvertises/list">广告列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>

@@ -23,4 +23,4 @@ const UserSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-module.exports = mongoose.model('Qdetile', UserSchema)
+module.exports = mongoose.model('Qwallet', UserSchema)

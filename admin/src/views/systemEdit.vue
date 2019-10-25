@@ -56,7 +56,7 @@ export default {
     async save() {
       let res;
       console.log(this.model);
-      res = await this.$http.post("rest/systems", this.model);
+      res = await this.$http.put(`rest/systems/${this.model._id}`, this.model);
       this.$message({
         type: "success",
         message: "保存成功！"
