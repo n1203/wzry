@@ -1,0 +1,104 @@
+/* pages/abnormal/abnormal.wxss */
+/* 顶部、信息填写和广告位都用的fixed定位 */
+/* 页面顶部 */
+.topBackground{
+  position: fixed;
+  width:100%;
+  height:560rpx;
+  background:linear-gradient(180deg,#0005D8 0%,#0050D5 20%,rgba(255,255,255,1) 48%);
+  border-radius:0px;
+  z-index: 0;
+}
+.topNavigation{
+  position: fixed;
+  height:190rpx;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left:43rpx;
+}
+.topBackIcon{
+  height:40rpx;
+  width:40rpx;
+}
+.topNavigation text{
+  margin-left:210rpx;
+}
+.topInput{
+  position:fixed;
+  margin-top:170rpx;
+  margin-left:11%;
+  padding-left:24rpx;
+  background:white;
+  width:76%;
+  height:64rpx;
+  border-radius:10rpx;
+  font-size:32rpx;
+}
+
+
+/* 信息输入 */
+.dataInput{
+  width:84%;
+  margin-right:8%;
+  margin-left:8%;
+  height:677rpx;
+  position: fixed;
+  z-index:100;
+  margin-top:270rpx;
+}
+.dataTxetarea{
+  border:1px solid #ccc;
+  width:96%;
+  height:282rpx;
+  padding-top:18rpx;
+  padding-left:28rpx;
+  font-size:34rpx;
+}
+.dataList{
+  padding-left:20rpx;
+  margin-top:20rpx;
+  width:97%;
+  background:#ECF7FF;
+  border-radius:10rpx;
+  height:277rpx;
+  font-size:36rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dataList text{
+  width:96%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dataBtn{
+  width:100%;
+  height:98rpx;
+  line-height: 98rpx;
+  color:white;
+  background: #27A4FF;
+  margin-top:30rpx;
+  font-size:38rpx;
+}
+
+
+/* 广告位 */
+.main-adv{
+  position:fixed;
+	width:84%;
+	height:221.73rpx;
+	border-radius:14rpx;
+	margin:0 auto;
+  z-index:100;
+  margin-top:1020rpx;
+  margin-left:8%;
+  margin-right:8%;
+}
+.swiperMain{
+	height:221.73rpx;
+	border-radius:14rpx;
+	overflow: hidden;
+}

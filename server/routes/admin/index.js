@@ -25,7 +25,7 @@ module.exports = app => {
     })
     router.get('/', async (req, res) => {
         const queryOptions = {}
-        if (req.Model.modelName == 'Category' || req.Model.modelName == 'Print') {
+        if (req.Model.modelName == 'Category' || req.Model.modelName == 'Print' || req.Model.modelName == 'Guofeedback' || req.Model.modelName == 'Guoorder') {
             queryOptions.populate = 'parent'
         }
         const model = await req.Model.find().sort({ createdAt: -1 }).setOptions(queryOptions).limit(10)
@@ -50,10 +50,9 @@ module.exports = app => {
             config: config.oss
         })
     })
-    app.post('/admin/api/carsh/:id', async (req, res) => {
-        const old = await Quser.findById(req.body.id)
-        req.body.guoguo += old.guoguo
-        const model = await Quser.findByIdAndUpdate(req.body.id, req.body)
+    //获取异常订单列表
+    app.get('/admin/api/rest/abnormalOrder', async (req, res) => {
+        const model = await Guoorder.find()
         res.send(model)
     })
     app.post('/admin/api/upload', upload.single('file'), async (req, res) => {

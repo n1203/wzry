@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    
+    "pages/submit/submit",
+    "pages/yellow/yellow",
+    "pages/myhome/myhome",
+    
+    "pages/feedback/feedback",
+    "pages/userinfo/userinfo",
+    
+    
+    
+    "pages/startpage/startpage",
+    
+    "pages/detail/detail",
+    "pages/post/post",
+    "pages/service/service",
+    "pages/input-sousuo/input-sousuo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "景院快递代取",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "iconfont-img/home.png",
+        "selectedIconPath": "iconfont-img/click-home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/yellow/yellow",
+        "iconPath": "iconfont-img/post.png",
+        "selectedIconPath": "iconfont-img/click-post.png",
+        "text": "驿站"
+      },
+      {
+        "pagePath": "pages/myhome/myhome",
+        "iconPath": "iconfont-img/my.png",
+        "selectedIconPath": "iconfont-img/click-my.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {}
+}

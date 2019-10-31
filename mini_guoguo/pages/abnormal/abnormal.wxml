@@ -1,0 +1,39 @@
+<view>
+
+
+  <!-- navigation导航 -->
+  <view class="top">
+    <view class="topBackground"></view>
+    <view class="topNavigation">
+      <image class="topBackIcon" mode="widthFix" src="./back.png"></image>
+      <text>订单异常</text>
+    </view>
+    <input class="topInput" placeholder="异常运单号"></input>
+  </view>
+
+
+  <!-- 内容填写区域 -->
+  <view class="dataInput">
+    <textarea name="" bindinput="" class="dataTxetarea" placeholder="异常原因"></textarea>
+    <view class="dataList">
+      <text>派送员：胡俊平(信工17计网)</text>
+      <text>派送进度：已接单</text>
+      <text>接单时间：20191025 12:57</text>
+      <text>悬赏1元</text>
+    </view>
+    <button class="dataBtn">提交</button>
+  </view>
+
+
+  <!-- 广告位 -->
+  <view class="main-adv">
+    <swiper circular="true" indicator-dots="true" autoplay="true" class="swiperMain">
+      <swiper-item class="swiperItem" wx:for="{{imgList}}" wx:key="{{index}}">
+        <navigator>
+          <image class="swiperImage" mode="widthFix" src="{{imgList[index].banner}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+    
+</view>

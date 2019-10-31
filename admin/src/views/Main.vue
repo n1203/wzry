@@ -83,6 +83,10 @@
             <el-menu-item index="/guoadvertises/edit">新增广告</el-menu-item>
             <el-menu-item index="/guoadvertises/list">广告列表</el-menu-item>
           </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">问题反馈</template>
+            <el-menu-item index="/guofeedbacks/list">反馈列表</el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
       </el-menu>
     </el-aside>

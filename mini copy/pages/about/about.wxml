@@ -1,0 +1,38 @@
+<!--pages/about/about.wxml-->
+<view class="main">
+  <view class="about-header">
+    <view class="about-header-img">
+      <image class="about-header-image" mode="widthFix" src="../../images/1.jpg"></image>
+    </view>
+    <view class="about-header-jianjie">
+      公司简介
+    </view>
+    <view class="about-header-content">
+      属性规定文本块中首行文本的缩进注释允许使用负值如果使用负值那么首行会被缩进到左边注意在之前总是继承计算值而不是声明值允许使用负值如果使用负值那么首行会被缩进到左边注意在之前总是继承。
+    </view>
+  </view>
+  <view class="about-body">
+    <!-- grade评分 -->
+    <view class="about-body-phone">
+      <text>客服电话</text>
+      <text>010-11345678</text>
+    </view>
+    <view class="about-body-time">
+      <text>工作日</text>
+      <text>9：00-18：00</text>
+    </view>
+    <view class="about-body-email">
+      <text>客服邮箱</text>
+      <text>2995895090@qq.com</text>
+    </view>
+    <view class="about-body-grade">
+      <text>去点赞</text>
+      <!-- src="../../images/6.png" -->
+      <image wx:if="{{url}}" bindtap="clickwjx" class=".about-body-grade-wjx" src="{{url}}" ></image>
+    </view>
+  </view>
+  <view class="about-bottom">最终解释权归景德镇快点网络科技有限公司</view>
+</view>
+
+
+

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+      "navbar": "../../components/navbar/navbar"
+    },
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "景院快递代取"
+}

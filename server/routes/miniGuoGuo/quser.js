@@ -9,21 +9,13 @@ const Qdetile = require('../../models/Qdetile')
 const System = require('../../models/System')
 // 设置jwt
 let generateToken = function (user) {
-    return jwt.sign(user, config.jwtSecret, {
+    return jwt.sign(user, config.GuoGuo.jwtSecret, {
         expiresIn: 7200
-    })
-}
-//获取页面初始化资料
-exports.now = async (req, res) => {
-    const queryOptions = {}
-    const model = await System.find().setOptions(queryOptions)
-    return res.json({
-        model
     })
 }
 //小程序用户登录
 exports.login = (req, res) => {
-    const queryString = `appid=${config.appId}&secret=${config.appSecret}&js_code=${req.body.code}&grant_type=authorization_code`;
+    const queryString = `appid=${config.GuoGuo.appId}&secret=${config.GuoGuo.appSecret}&js_code=${req.body.code}&grant_type=authorization_code`;
     const wxAPI = `https://api.weixin.qq.com/sns/jscode2session?${queryString}`;
     axios.get(wxAPI)
         .then(response => {
@@ -56,10 +48,9 @@ exports.login = (req, res) => {
 //登录token校验
 exports.checkToken = (req, res, next) => {
     let token = req.headers.authorization;
-    console.log(token);
     if (token) {
         console.log('token exist');
-        jwt.verify(token, config.jwtSecret, (err, decoded) => {
+        jwt.verify(token, config.GuoGuo.jwtSecret, (err, decoded) => {
             console.log('jwt.verify');
             if (err) {
                 console.log('err');
@@ -75,7 +66,8 @@ exports.checkToken = (req, res, next) => {
                     req.openid = decoded.openid;
                     console.log('req.openid = decoded.openid;');
                     const wxAPI2 = `https://api.weixin.qq.com/wxa/getpaidunionid?access_token=ACCESS_TOKEN&openid=OPENID`
-                    return res.status(200).json({ message: '已登录' });
+                    // res.status(200).json({ message: '已登录' });
+                    next()
                 } else {
                     console.log('认证失败！');
                     res.status(401).json({ error: '认证失败！' });
@@ -90,18 +82,26 @@ exports.checkToken = (req, res, next) => {
     }
 }
 // 用户个人资料更新
-exports.users = (req, res) => {
-    const userData = req.body.userData.detail.userInfo
-    const openid = req.body.openid
-    User.findOne({ openId: openid }, (err, user) => {
-        if (user) {
-            user.nickname = userData.nickName;
-            user.headimgurl = userData.avatarUrl;
-            user.gender = userData.gender;
-            user.save();
-            return res.json({
-                user
-            })
-        }
+exports.users = async (req, res) => {
+    const model = await User.findByIdAndUpdate(req.body.userid, req.body.data)
+    return res.json({
+        model
+    })
+}
+exports.userinfo = async (req, res) => {
+    console.log(req.params)
+    const model = await User.findById(req.params.id)
+    return res.json({
+        model
+    })
+}
+
+//用户裹裹积分增加/减少
+//user表示查询用户字段
+//guoguo表示积分的增减数值
+exports.addguoguo = async (req, res) => {
+    const model = await User.update(req.body.user, { $inc: { guoguo: req.body.guoguo } })
+    return res.json({
+        model
     })
 }

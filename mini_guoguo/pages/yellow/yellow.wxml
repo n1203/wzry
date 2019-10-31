@@ -1,0 +1,22 @@
+
+
+  <!-- 页面内容 -->
+<view class="detail-main">
+  <view class="main-status">
+  <scroll-view scroll-y>
+
+    <view wx:for="{{Express}}" wx:key="{{index}}" class="status-img">
+      <view class="img-yunda">
+        <image mode="widthFix" src="{{Express[index].icon}}"></image>
+      </view>
+      <view class="img-text">
+        <text>{{Express[index].name}}快递</text>
+        <text class="text-address">地址：{{Express[index].address}}</text>
+        <text class="text-phone">联系电话：{{Express[index].phone}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  </view>
+  
+</view>

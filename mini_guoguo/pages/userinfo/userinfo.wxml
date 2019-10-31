@@ -1,0 +1,35 @@
+<view class="detileContainer">
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="11" bindinput="bindKeyPhone" id='phone' placeholder="{{phone}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="12" bindinput="bindKeyPhone" id='learncode' placeholder="{{learncode}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="30" bindinput="bindKeyPhone" id='weixin' placeholder="{{weixin}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyPhone" id='qq' placeholder="{{qq}}"/>
+      </view>
+<view style="width:100%;height:1rem;"></view>
+
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="16" bindinput="bindKeyPhone" id='address' placeholder="{{address}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="30" bindinput="bindKeyPhone" id='birthday' placeholder="{{birthday}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyPhone" id='grade' placeholder="{{grade}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="12" bindinput="bindKeyPhone" id='tie' placeholder="{{tie}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="12" bindinput="bindKeyPhone" id='class' placeholder="{{class}}"/>
+      </view>
+      <view class="weui-cell">
+        <input class="weui-input"  maxlength="12" bindinput="bindKeyPhone" id='signature' placeholder="{{signature}}"/>
+      </view>
+      <view class="submitSave" bindtap="submitSave">保存</view>
+</view>

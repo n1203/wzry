@@ -1,0 +1,8 @@
+<view class='nav-wrap2' style='height: {{height*2 + 20}}px;'>
+  <view class='nav-title2' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+  <view style='display: flex; justify-content: space-around;flex-direction: column'>
+    <view class='nav-capsule2' style='height: {{height*2 + 44}}px;' wx:if='{{navbarData.showCapsule}}'>
+      
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+@import "../Iconfont/iconfont.wxss";
+
+
+/* 导航栏样式 */
+.home-page{
+  position: fixed;
+  height: 140rpx;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+.navbar-relation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 180rpx;
+  font-size: 36rpx;
+}
+.icon-fanhui{
+  position: absolute;
+  left: 4%;
+  top: 65%;
+  transform: translate(-4%,-50%);
+  font-weight: bold;
+}
+
+
+/* payment页面样式 */
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 306rpx 0;
+  box-sizing: border-box;
+}
+.icon-zhifuchenggong-copy-copy{
+  color: #40F0DB;
+}
+.payment-succeed{
+  font-size: 48rpx;
+  font-weight: 600;
+  margin: 35rpx 0;
+  letter-spacing: 2rpx;
+  opacity: 0.6;
+}
+.distribution{
+  font-size: 32rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+}
+.Examine{
+  position: absolute;
+  bottom: 30%;
+  border-radius: 50rpx;
+  letter-spacing: 4rpx;
+  padding: 3rpx 60rpx;
+  color: #fff;
+  background-color: #40F0DB;
+}

@@ -11,6 +11,9 @@
       <el-form-item label="取快递按钮内容">
         <el-input v-model="model.server"></el-input>
       </el-form-item>
+      <el-form-item label="订单页价格提示">
+        <el-input v-model="model.price"></el-input>
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" native-type="submit">保存</el-button>
       </el-form-item>

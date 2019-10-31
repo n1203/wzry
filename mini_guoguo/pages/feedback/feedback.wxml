@@ -1,0 +1,8 @@
+<view class="detileContainer">
+      <view class="weui-cell">
+      <textarea style="height:120px;" class="weui-input" bindblur="bindTextAreaBlur"  placeholder="您可以在这里描述对我们的建议、问题、订单异常以及商业合作等内容" />
+        <!-- <input class="weui-input" type="textarea" height="300"   bindinput="bindKeyPhone" id='phone' placeholder="{{phone}}"/> -->
+      </view>
+      
+      <view class="submitSave" bindtap="submitSave">提交</view>
+</view>

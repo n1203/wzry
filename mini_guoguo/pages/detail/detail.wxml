@@ -1,0 +1,46 @@
+  <!-- 最顶部导航栏 -->
+  <view class='home-page2'>
+  <h4 class="navbar-relation2">订单详情</h4>
+  </view>
+
+  <!-- 页面内容 -->
+<view class="detail-main">
+  <view class="main-status">
+    <view class="status-img">
+      <view class="img-yunda">
+        <image mode="widthFix" src="{{info.postInc.icon}}"></image>
+      </view>
+      <view class="img-text">
+        <text>运单号：{{info.postId}}</text>
+        <text>收货地址：{{info.address}}</text>
+        <text>收货姓名：{{info.name}}</text>
+      </view>
+    </view>
+    <text class="status-yunda">{{info.postInc.name}}  官方电话：{{info.postInc.phone}}</text>
+    <view class="status-now">
+      <view class="now-status">当前状态:</view>
+      <view class="now-receive">
+        <text class="receive-xi">{{info.postman.name}}({{info.postman.class}} - {{info.postman.address}})</text>
+        <text class="receive-jie">{{info.condition==0?'等待接单':'已接单'}}</text>
+      </view>
+    </view>
+    <view class="status-ser">
+      <text bindtap="remider"  class="ser-white" wx:if="{{!info.conditions}}">催单</text>
+      <text bindtap="contact" class="ser-black">联系{{info.postman.name}}</text>
+      <text bindtap="feedback" class="ser-black">订单异常？</text>
+    </view>
+    <text class="status-time">下单时间：{{info.time}}</text>
+  </view>
+  
+  <view class="main-adv">
+    <swiper circular="true" indicator-dots="true" autoplay="true" class="swiperMain">
+      <swiper-item class="swiperItem" wx:for="{{imgList}}" wx:key="{{index}}">
+        <navigator>
+          <!-- index是键值 -->
+          <image class="swiperImage" mode="widthFix" src="{{imgList[index].banner}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <text></text>
+</view>

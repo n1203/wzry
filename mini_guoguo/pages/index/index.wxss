@@ -1,0 +1,211 @@
+/**index.wxss**/
+@import "/icon/iconfont.wxss";
+
+/* 导航栏样式 */
+.home-page2{
+  position: fixed;
+  width:100vw;
+  height:560rpx;
+  background:linear-gradient(180deg,rgba(0,216,163,1) 0%,rgba(0,179,213,1) 38%,rgba(255,255,255,1) 48%);
+  border-radius:0px;
+  z-index: 10;
+}
+.navbar-relation2 {
+  position: absolute;
+  left: 50%;
+  top: 13.8%;
+  transform: translate(-50%,-50%);
+  font-size: 36rpx;
+  color: #fff;
+  z-index: 10;
+}
+
+/* 后期修改样式 */
+
+
+/* 整体布局 */
+.contain{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+/* 搜索框样式 */
+.input-sou{
+  position: fixed;
+  display: flex;
+  margin: 0 auto;
+  margin-top: -30rpx;
+  width:622rpx;
+  height:70rpx;
+  background:rgba(255,255,255,1);
+  border-radius:8px;
+  z-index: 10;
+}
+.input-sou p{
+  display:inline-block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 70rpx;
+  width:274rpx;
+  height: 40rpx;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(153,153,153,1);
+}
+.sousuo{
+  display:inline-block;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+  height: 36rpx;
+  width: 36rpx;
+  z-index: 10;
+}
+
+/* 这里放接下来的内容的整体布局 */
+.box3{
+  position: relative;
+  width:622rpx;
+  top: 180rpx;
+  overflow: hidden;
+  margin:0 auto;
+  margin-bottom:4rpx;
+}
+/* 已接单下面添加的内容 */
+.mainImg{
+  width:20.25%;
+  height:130rpx;
+
+}
+.mainDetail-yundan{
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mainImg image{
+  width:100%;
+}
+.mainDetail{
+  width:70%;
+  height:130rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size:28rpx;
+}
+.Main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+  height:200rpx;
+  background:rgb(238, 233, 233);
+  box-shadow:0px 1px 14px 2px rgba(241,241,241,0.7);
+  border-radius:8px;
+}
+.Mainw{
+  display: flex;
+  width:311px;
+  height:332px;
+  background:rgb(0, 162, 255);
+  box-shadow:0px 1px 14px 2px rgba(241,241,241,0.7);
+  border-radius:8px;
+}
+
+/* 代取快递，成功多少单 */
+.box2{
+   position: fixed;
+   left: 52rpx;
+   margin-top: 80rpx;
+   z-index: 999;
+}
+/* 代取快递 */
+.delivery{
+  display: inline-block;
+  width:292rpx;
+  height:170rpx;
+  padding-top: 5rpx;
+  background:linear-gradient(-5deg,rgba(48,122,247,1),rgba(48,122,247,1),rgba(48,122,247,1));
+  box-shadow:0px 1px 30px 7px rgba(46,186,211,0.7);
+  border-radius:5px;
+  margin: 0 10rpx 40rpx 10rpx;
+}
+.get-delivery{
+  display: block;
+  text-align: center;
+  font-size:15px;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+}
+/* 代取快递发送图标 */
+.fasong{
+  width:78rpx;
+  height:74rpx;
+  display: block;
+  margin:20rpx auto 10rpx auto;
+  text-align: center;
+}
+
+/* 成功接单 */
+.succeed{
+  display:inline-block;
+  width:292rpx;
+  height:170rpx;
+  padding-top: 5rpx;
+  background:linear-gradient(-5deg,rgba(39,164,255,1),rgba(39,164,255,1),rgba(39,164,255,1),rgba(39,164,255,1),rgba(39,164,255,1));
+  box-shadow:0px 1px 30px 7px rgba(39,164,255,0.7);
+  border-radius:5px;
+  margin: 0 10rpx 40rpx 30rpx;
+}
+.succeed-many{
+  font-size:15px;
+  display: block;
+  text-align: center;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+}
+/* 成功接单统计图标 */
+.tongji{
+  width:72rpx;
+  height:72rpx;
+  display: block;
+  margin:20rpx auto 10rpx auto;
+  text-align: center;
+}
+
+/* 已接单、已结单总体 */
+.have-list{
+   position: fixed;
+   top: 500rpx;
+   z-index: 999;
+   width: 100vw;
+}
+/* 已接单 */
+.have-order{
+  width:124rpx;
+  height:34rpx;
+  font-size:18px;
+  margin:0 6rpx 0 60rpx;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(0,0,0,1);
+}
+/* 已结单 */
+.have-statements{
+  width:102rpx;
+  height:24rpx;
+  font-size:12px;
+  margin-left: 20rpx;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(85,85,85,1);
+}

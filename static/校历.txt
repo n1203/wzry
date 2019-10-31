@@ -23,3 +23,64 @@
 
 1.6-1.12		期终考试: 集中实调总结
 1.13-1.19		集中阅卷、登分、总评:各班上交学生成绩:各学院上交整理实践教学场所并对安全等方面自查；各学院上交教学工作总结；对各实践教学场所进行安全检查；提交下学期教学有关准备工作计划
+
+
+
+    // 发送后台换取 用户资料
+    wx.request({
+      url: `${config.api}/user/userinfo/${userid}`,
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+
+
+
+if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+
+    } else if (this.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
+
+
+
+    address: "西2a303"
+condition: 0
+conditions: 0
+createdAt: "2019-10-30T02:04:32.046Z"
+message: "26365"
+name: "胡俊平"
+postId: "263637597436753"
+postInc: {_id: "5db71c6089f23b19acf2c710", name: "圆通", phone: "95554", address: "前街斜坡左侧妈妈驿站", icon: "https://kd-print.oss-cn-hangzhou.aliyuncs.com//708101b5c60654e900e44431f3f09de5.png", …}
+postman: {_id: "5db45bd9746310254caae5f9", name: "派送员1", sex: "男", phone: "1887654654", qq: "45564654", …}
+time: "2019-10-30T02:04:30.895Z"
+updatedAt: "2019-10-30T14:15:44.676Z"
+user: "5db833b99392a35a48732cbd"
+__v: 0
+_id: "5db8efb096f6d559cc4fef27"

@@ -1,0 +1,127 @@
+<view class="container" wx:if="{{!hasUserInfo}}">
+<view class='appInfo'>
+<image style='height:100px;width:100px' src='http://yun1.e-spy.cn/APP%20ICON.jpg'></image>
+<view>景院裹裹</view>
+</view>
+  <view class="usermotto">
+    <text class="user-motto">该程序将获取以下授权</text> 
+    <view >获取您的公开信息（昵称、头像等）</view>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" style='background:#27a4ff;width:250px;color:#FFF;' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录景院裹裹小程序 </button>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+</view>
+
+<!-- 个人中心头部总体布局  -->
+<view class='personal-header' style='margin-top: {{height}}px'  wx:if="{{hasUserInfo}}">
+<!-- 头部整体布局 -->
+  <view class="header-box">
+  <view class="header-icon">
+    <icon class="KuaiDian GuoGuo-package-unpacka-box-delivery-parcel-office-edaabcb"></icon>
+  </view>
+    <!-- 头像总体 -->
+      <view class="portrait-box">
+        <image class="header-portrait" mode='widthFix' src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <!-- 头部文字总体 -->
+          <view class="Text-box">
+              <view class="portrait">
+                <h4 class="portrait-text">{{userInfo.nickName}}</h4>          
+              </view>
+                <view class="Data">
+                <p class="Data-text">这是你使用景院裹裹的第 {{userday}} 天</p>                
+                </view>
+          </view>
+          
+          <!-- 裹裹余额总体 -->
+          <view class="examine-balance">
+          <!-- 砖石图标 -->
+            <view class="masonry-image">
+              <image class="masonry" src="../../images/masonry.png" mode='widthFix'></image>
+            </view>
+            <!-- 裹裹余额？ -->
+            <view class="guoguo-balance">
+              <h4 class="balance" >裹裹余额 <span style="color:red;">{{userInfo.guoguo}}</span></h4>
+            </view>
+             <view class="guoguo-text">
+              <h4 class="balance-text">邀请新人限时领取海量裹派余额</h4>
+            </view>
+            <!-- 领裹裹按钮 -->
+               <!-- <button wx:if="false">
+                  <p class="neck-botton">领裹裹</p>
+                  <icon class="KuaiDian GuoGuo-you" id="bottom-icon"></icon>
+                </button> -->
+          </view>
+  </view>
+</view>
+<view  wx:if="{{hasUserInfo}}">
+<!-- 列表整体布局 -->
+<view class="personal-container" >
+<!-- 导入包裹列表 -->
+  <view class="package-list">
+    <view class="left-text">
+      <icon class="KuaiDian GuoGuo-daoru"></icon>
+      <h4 class="package-text">我的裹裹列表</h4>
+    </view>
+    <view class="right-text">
+      <h5 class="phone-text">最近都代拿了哪些裹裹？</h5>
+      <icon class="KuaiDian GuoGuo-you list-zuo"></icon>
+    </view>
+  </view>
+<!-- 个人资料 -->
+ <view class="remain-list" bindtap="gouserinfo">
+    <view class="left-text">
+      <icon class="KuaiDian GuoGuo-shenfenzhenghao"></icon>
+      <h4 class="package-text">个人资料</h4>
+    </view>
+    <view class="right-text">
+      <icon class="KuaiDian GuoGuo-you list-zuo"></icon>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="line"></view>
+
+  <!-- 关于我们 -->
+  <view class="remain-list">
+    <view class="left-text">
+      <icon class="KuaiDian GuoGuo-weizhi"></icon>
+      <h4 class="package-text">关于我们</h4>
+    </view>
+    <view class="right-text">
+      <icon class="KuaiDian GuoGuo-you list-zuo"></icon>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="line"></view>
+
+  <!-- 服务中心 -->
+  <view class="remain-list">
+    <view class="left-text">
+      <icon class="KuaiDian GuoGuo-kefu"></icon>
+      <h4 class="package-text">在线客服</h4>
+    </view>
+    <view class="right-text">
+      <icon class="KuaiDian GuoGuo-you list-zuo"></icon>
+    </view>
+  </view>
+<!-- 分割线 -->
+  <view class="line"></view>
+
+  <!-- 我要反馈 -->
+  <view class="remain-list"  bindtap="gofeedback">
+    <view class="left-text">
+      <icon class="KuaiDian GuoGuo-fankui"></icon>
+      <h4 class="package-text">我要反馈</h4>
+    </view>
+    <view class="right-text">
+      <icon class="KuaiDian GuoGuo-you list-zuo"></icon>
+    </view>
+  </view>
+  <!-- 其他列表 -->
+  
+</view>
+</view>

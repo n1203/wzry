@@ -7,7 +7,7 @@
       <el-table-column width="100" prop="price" label="悬赏金额"></el-table-column>
       <el-table-column width="100" prop="size" label="包裹大小"></el-table-column>
       <el-table-column width="100" prop="parent.postInc" label="快递公司"></el-table-column>
-      <el-table-column width="100" prop="parent.user" label="发布者"></el-table-column>
+      <el-table-column width="100" prop="user.nickName" label="发布者"></el-table-column>
       <el-table-column width="100" prop="parent.postman" label="配送员"></el-table-column>
       <el-table-column prop="time" label="上传时间"></el-table-column>
       <el-table-column prop="condition" label="订单状态"></el-table-column>

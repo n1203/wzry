@@ -1,0 +1,31 @@
+<view class="topBackground">
+
+  <!-- 内容填写区域 -->
+  <view class="dataInput">
+  <view class="datanNameAndAddress">
+  <picker mode="selector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{objectMultiArray}}" range-key="name">
+    <view class="picker">
+      快递：{{objectMultiArray[[multiIndex]].name}}
+    </view>
+  </picker>
+</view>
+    <input name="" bindinput="getSendcode" class="datanNameAndAddress" placeholder="请输入运单号"></input>
+    <textarea name="" bindinput="getMessage" class="dataTxetarea" placeholder="请输入取件短信内容"></textarea>
+    <input name="" bindinput="getSendname" class="datanNameAndAddress" placeholder="收件人姓名"></input>
+    <input name="" bindinput="getAddress" class="datanNameAndAddress" placeholder="收货地点"></input>
+    <button class="dataBtn" bindtap="submitOrder">提交订单</button>
+  </view>
+
+
+  <!-- 广告位 -->
+  <view class="main-adv">
+    <swiper circular="true" indicator-dots="true" autoplay="true" class="swiperMain">
+      <swiper-item class="swiperItem" wx:for="{{imgList}}" wx:key="{{index}}">
+        <navigator>
+          <image class="swiperImage" mode="widthFix" src="{{imgList[index].banner}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+    
+</view>

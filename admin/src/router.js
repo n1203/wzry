@@ -24,6 +24,8 @@ import PostIncEdit from './views/GuoGuo/PostIncEdit'
 import PostIncList from './views/GuoGuo/PostIncList'
 import AdvertiseEdit from './views/GuoGuo/AdvertiseEdit'
 import AdvertiseList from './views/GuoGuo/AdvertiseList'
+import GuofeedbackEdit from './views/GuoGuo/GuofeedbackEdit'
+import GuofeedbackList from './views/GuoGuo/GuofeedbackList'
 
 Vue.use(Router)
 
@@ -69,7 +71,11 @@ export default new Router({
         // 裹裹广告管理
         { path: '/guoadvertises/list', component: AdvertiseList },
         { path: '/guoadvertises/edit/:id', component: AdvertiseEdit, props: true },
-        { path: '/guoadvertises/edit/', component: AdvertiseEdit }
+        { path: '/guoadvertises/edit/', component: AdvertiseEdit },
+        // 裹裹反馈管理
+        { path: '/guofeedbacks/list', component: GuofeedbackList },
+        { path: '/guofeedbacks/edit/:id', component: GuofeedbackEdit, props: true },
+        { path: '/guofeedbacks/edit/', component: GuofeedbackEdit }
       ]
     }
   ]

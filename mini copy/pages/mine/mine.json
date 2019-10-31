@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "个人中心",
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "van-field": "vant-weapp/field",
+        "van-stepper": "vant-weapp/stepper",
+        "van-tabbar": "vant-weapp/tabbar",
+        "van-tabbar-item": "vant-weapp/tabbar-item",
+        "van-cell": "vant-weapp/cell",
+        "van-grid": "vant-weapp/grid",
+        "van-icon": "vant-weapp/icon",
+        "van-grid-item": "vant-weapp/grid-item"
+    }
+}

@@ -1,0 +1,13 @@
+<!--logs.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='home-page' style='margin-top: {{height}}px'>
+  <h4 class="navbar-relation">付款成功</h4>
+  <view class="iconfont icon-fanhui" style="font-size:36rpx;"></view>
+</view>
+<view class="container">
+  <view class="iconfont icon-zhifuchenggong-copy-copy" style="font-size: 180rpx;"></view>
+  <h3 class="payment-succeed">付款成功</h3>
+  <h4 class="distribution">我们将尽快给您发货</h4>
+  <button type="button" class="Examine">查看订单详情</button>
+</view>

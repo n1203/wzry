@@ -1,0 +1,55 @@
+    <!--index.wxml-->
+<view class="top" style="background:#fff;display:block;">
+    <!-- 顶部导航栏 -->
+    <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+    <view class='home-page2' style='margin-top: {{height}}px'>
+      <h4 wx:for="{{SysInfo}}" wx:key="{{index}}" class="navbar-relation2">{{SysInfo[index].index}}</h4>
+    </view>
+
+    <!-- 搜索输入框 -->
+    <view class="contain">
+      <view class="input-sou" bindtap="handleClick">
+        <image class="sousuo" src="../../iconfont-img/sousou.png"></image>
+        <p class="waybill">运单号来这里 查包裹</p>
+      </view>
+
+      <!-- 代取快递，成功多少单 -->
+      <view class="box2">
+        <view bindtap="toSubmit" class="delivery">
+          <view class="delivery-fasong"><image class="fasong" src="../../iconfont-img/fasong.png"></image></view>
+          <h4 class="get-delivery">代取快递</h4>
+        </view>
+        <view class="succeed">
+          <view><image class="tongji" src="../../iconfont-img/tongji.png"></image></view>
+          <h4 class="succeed-many">成功完成{{OrderNum.OrderNum}}单</h4>
+        </view>
+      </view>
+      <!-- 已结单 -->
+      <view class="have-list">
+      <h4 class="have-order">新发布 {{receive}}</h4>
+      <p class="have-statements">已结单 {{account}}</p>
+      </view>
+    </view>
+</view>
+
+  <scroll-view scroll-y>
+    <!-- 这里放接下来的内容 -->
+      <view style="padding-bottom:10rem">
+      <view class="box3" wx:for="{{Express}}" wx:key="{{index}}" bindtap="click" id="{{Express[index]._id}}">
+        <view class="Main" >
+        <!-- {{Express[index].name}} -->
+          <view class="mainImg" >
+            <image mode="widthFix" src="{{Express[index].postInc.icon}}"></image>
+          </view>
+          <view class="mainDetail" >
+            <text class="mainDetail-yundan">运单号：{{Express[index].postId}}</text>
+            <text>状态：{{Express[index].condition==0?'等待接单':'已接单'}}</text>
+            <text>{{Express[index].time}}</text>
+          </view>
+        </view>
+      </view>
+
+      </view>
+
+  </scroll-view>

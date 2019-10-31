@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "van-grid": "vant-weapp/grid",
+    "van-icon": "vant-weapp/icon",
+    "van-grid-item": "vant-weapp/grid-item"
+  }
+}

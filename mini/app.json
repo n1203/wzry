@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/mine/mine",
+    
     "pages/index/index",
     
     "pages/shoplist/shoplist",
     "pages/print/print",
     "pages/about/about",    
     "pages/minedetile/minedetile",
-    "pages/mine/mine",
    
     "pages/contactUS/contactUS",    
     "pages/payment/payment",

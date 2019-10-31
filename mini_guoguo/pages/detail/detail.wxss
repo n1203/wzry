@@ -1,0 +1,133 @@
+.navbar-relation2 {
+  position: absolute;
+  left: 50%;
+  top: 13.8%;
+  transform: translate(-50%,-50%);
+  font-size: 36rpx;
+  color: #fff;
+  z-index: 0;
+}
+.home-page2{
+  position: fixed;
+  width:100vw;
+  height:560rpx;
+  background:linear-gradient(180deg,rgba(0,216,163,1) 0%,rgba(0,179,213,1) 38%,rgba(255,255,255,1) 48%);
+  border-radius:0px;
+  z-index: 0;
+}
+.detail-main{
+	width:100%;
+  padding-top:100rpx;
+  position:absolute;
+  z-index:999;
+}
+.main-status{
+	margin:0 auto;
+	margin-top:70rpx;
+	margin-bottom:60rpx;
+	border:1rpx solid #FAFAFA;
+  background:white;
+	width:84.51%;
+	height:0;
+	padding-bottom:70%;
+	display: flex;
+	flex-direction:column ;
+	border-radius: 19.6rpx;
+}
+.status-img{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top:6.66%;
+}
+.img-text{
+	display: flex;
+	flex-direction: column;
+	margin-left: 4.5%;
+	font-size:32rpx;
+}
+.img-yunda{
+	width:20.4%;
+	height:0;
+	padding-bottom:20.4%;
+}
+.img-yunda image{
+	width:100%;
+	height:100%;
+}
+.status-yunda{
+	margin-left:7%;
+	font-size:12px;
+	color:#888888;
+	margin-top:8px;
+	margin-bottom:8px;
+}
+.status-now{
+	width:86%;
+	height:0;
+	padding-bottom:15.4%;
+	margin-left:7%;
+	margin-bottom:8.68%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.now-status{
+	font-size:34rpx;
+	font-weight:bold;
+}
+.now-receive{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width:71%;
+	height:126rpx;
+	align-items: center;
+	background: #E8F5FF;
+	border-radius: 10rpx;
+}
+.receive-xi{
+	color:#999999;
+	font-size:29.4rpx;
+}
+.receive-jie{
+	color:#27A4FF;
+	font-size:36.75rpx;
+}
+.status-ser{
+	width:84.51%;
+	height:45.325rpx;
+	margin: 0 auto;
+	font-size:29.4rpx;
+	
+}
+.status-ser text{
+	padding:0rpx 14rpx;
+	margin-right:20rpx;
+	border-radius:10rpx;
+}
+.ser-white{
+	color:#000000;
+	border:1px solid #ccc;
+}
+.ser-black{
+	color:#FFFFFF;
+	background:#08CEE7;
+
+}
+.status-time{
+	font-size:29.4rpx;
+	width:84.51%;
+	margin:18rpx auto;
+}
+.main-adv{
+	width:84.51%;
+	height:221.73rpx;
+	border-radius:14rpx;
+	margin:0 auto;
+}
+.swiperMain{
+	height:221.73rpx;
+	border-radius:14rpx;
+	overflow: hidden;
+}

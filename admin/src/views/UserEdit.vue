@@ -11,21 +11,27 @@
         >
           <img
             style="width:100px;height:100px"
-            v-if="model.headimgurl"
-            :src="model.headimgurl"
+            v-if="model.avatarUrl"
+            :src="model.avatarUrl"
             class="avatar"
           />
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
       <el-form-item label="用户昵称">
-        <el-input disabled v-model="model.nickname"></el-input>
+        <el-input disabled v-model="model.nickName"></el-input>
       </el-form-item>
       <el-form-item label="唯一Openid标识">
         <el-input disabled v-model="model.openId"></el-input>
       </el-form-item>
       <el-form-item label="unionid">
-        <el-input disabled v-model="model.unionid"></el-input>
+        <el-input disabled v-model="model._id"></el-input>
+      </el-form-item>
+      <el-form-item label="性别">
+        <el-input disabled v-model="model.gender=='2'?'女':'男'"></el-input>
+      </el-form-item>
+      <el-form-item label="城市">
+        <el-input disabled v-model="model.country+model.province+model.city"></el-input>
       </el-form-item>
       <el-form-item label="手机号">
         <el-input v-model="model.phone"></el-input>

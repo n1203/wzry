@@ -1,0 +1,362 @@
+@import "../../icon/iconfont.wxss";
+
+/* pages/startpage/startpage.wxss */
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.appInfo{
+  text-align: center;
+}
+.appInfo view{
+  color: #555;
+  line-height: 5rem;
+  
+}
+.usermotto{
+  width: 260px;
+  line-height: 1.8rem;
+  border-top: 1px solid #fafafa;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+  float: left;
+}
+.user-motto{
+  font-weight: 900;
+}
+.container{
+  height: 80vh;
+  position: relative;
+}
+.userinfo{
+  display: block;
+  position: absolute;
+  bottom: 20%;
+}
+.userinfo button{
+  line-height: 2.5rem;
+  height: 2.5rem;
+}
+
+/* 个人中心头部总体布局 */ 
+.personal-header{
+  position: fixed;
+  width:100vw;
+  height:450rpx;
+  background:linear-gradient(191deg,rgba(47,195,255,1) 0%,rgba(10,148,255,1) 40%,rgba(1,136,251,1) 68%);
+  z-index: 99;
+}
+
+/* 头部整体布局 */
+.header-box{
+  width: 100vw;
+  height:450rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+
+/* 头像总体 */
+.portrait-box{
+  position: absolute;
+  display: flex;
+  left: 20%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  width:156rpx;
+  height:156rpx;
+  background:rgba(236,247,255,1);
+  border:8rpx solid rgba(78,175,254,1);
+  border-radius:50%;
+}
+.portrait-box image{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+}
+
+/* 头部文字总体 */
+.Text-box{
+  position: absolute;
+  left: 47%;
+  top: 55%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  width:100%;
+  height:156rpx;
+}
+.portrait-text{
+  width:158rpx;
+  height:38rpx;
+  font-size:20px;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+}
+.Data{
+  width:100%;
+  height:24rpx;
+  position: absolute;
+  left: 60%;
+  top: 55%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+.Data-text{
+  width:100%;
+  height:24rpx;
+  font-size:12px;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+}
+
+/* 裹裹余额总体 */
+.examine-balance{
+  position: relative;
+  left: 50%;
+  top: 90%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  width:670rpx;
+  height:146rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:1px 4px 13px 2px rgba(241,241,241,1);
+  border-radius:15px;
+}
+
+/* 砖石图标 */
+.masonry-image{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width:80rpx;
+  height:68rpx;
+}
+.masonry{
+  width:80rpx;
+  height:68rpx;
+}
+
+/* 裹裹余额？ */
+.balance{
+  width:158rpx;
+  height:34rpx;
+  font-size:17px;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(0,0,0,1);
+}
+
+.guoguo-balance{
+  position: relative;
+  left: 31%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+}
+.guoguo-text{
+  position: absolute;
+  left: 40%;
+  top: 67%;
+  transform: translate(-50%,-50%);
+}
+.balance-text{
+  width:284rpx;
+  height:20rpx;
+  font-size:10px;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(85,85,85,1);
+}
+
+/* 领裹裹按钮 */
+
+ button{
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width:168rpx;
+  height:58rpx;
+  background:linear-gradient(-85deg,rgba(255,107,51,1) 0%,rgba(255,170,51,1) 100%);
+  border-radius:13px;
+}
+.neck-botton{
+  display: flex;
+  width:168rpx;
+  height:26rpx;
+  font-size:14px;
+  line-height: 58rpx;
+  font-family:Adobe Heiti Std;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+}
+#bottom-icon{
+  position: absolute;
+  left: 70%;
+  top: 0;
+  line-height: 58rpx;
+  transform: translate(-50%);
+  display: flex;
+  font-size: 13px;
+  color: #fff;
+}
+ /* 个人中心整体布局 */
+ .personal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 500rpx 0 10rem;
+    background: #F9F9F9;
+    overflow: hidden;
+    z-index: 80;
+} 
+/* 导入包裹列表总体 */
+.package-list{
+  position: relative;
+  width: 100vw;
+  height: 110rpx;
+  background-color: #fff;
+  margin: 6px 0;
+}
+/* .GuoGuo-zuo{
+  display: inline-block;
+  line-height: 55px;
+  margin: 0 15px;
+} */
+/* 导入包裹文字 */
+.package-text{
+  display: inline-block;
+  line-height: 110rpx;
+  margin: 0 auto;
+}
+/* 导入包裹以及实人通行证最右边文字部分 */
+.right-text{
+  position: absolute;
+  right: 0;
+  top: 23%;
+  color: #999;
+  font-size: 13px;
+  opacity: 0.5;
+}
+/* 绑定手机管理更多包裹文字 */
+.phone-text{
+  display: inline-block;
+  margin: 0 auto;
+}
+/* 右边icon图标 */
+.list-zuo{
+  font-size: 12px;
+}
+
+/* 我的地址簿接下来的总体列表布局 */
+.remain-list{
+  position: relative;
+  width: 100vw;
+  height: 110rpx;
+  background-color: #fff;
+}
+/* 分割线 */
+.line{
+  width: 100%;
+  height: 3.8rpx;
+  margin-left: 56rpx;
+  background-color: rgb(243, 240, 240);
+}
+/* 图标样式（左边） */
+.GuoGuo-you{
+  display: inline-block; 
+  margin: 0 40rpx 0 20rpx;
+}
+.GuoGuo-daoru{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 34rpx 34rpx;
+  color: #1296db;
+  font-size: 21px;
+}
+.GuoGuo-weizhi{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 34rpx 0 34rpx;
+  color: #1296db;
+  font-weight: bold;
+  font-size: 21px;
+}
+.GuoGuo-shenfenzhenghao{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 20rpx 0 28rpx;
+  color: #1296db;
+  font-weight: bold;
+  font-size: 20px;
+}
+.GuoGuo-zhengjian{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 30rpx 0 36rpx;
+  color: #1296db;
+  font-weight: bold;
+  font-size: 22px;
+}
+.GuoGuo-drxx19{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 30rpx 0 38rpx;
+  color: #1296db;
+  font-size: 16px;
+}
+.GuoGuo-kefu{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 34rpx 0 34rpx;
+  color: #1296db;
+  font-weight: bold;
+  font-size: 21px;
+}
+.GuoGuo-fankui{
+  position: relative;
+  display: inline-block;
+  top: 4rpx;
+  margin: 0px 20rpx 0 24rpx;
+  color: #1296db;
+  font-weight: bold;
+  font-size: 32px;
+}
+.header-icon{
+  position: absolute;
+  left: 78%;
+  top: 45%;
+  text-align: center;
+  transform: translate(-50%,-50%)
+}
+.GuoGuo-package-unpacka-box-delivery-parcel-office-edaabcb{
+  font-size: 90px;
+  opacity:0.08;
+}
+
+

@@ -1,0 +1,21 @@
+/* pages/myhome/post.wxss */
+.detileContainer{
+  padding: 1rem 0;
+  height: 95vh;
+  background: #f1f1f1;
+}
+.weui-cell{
+  background: #fff;
+  padding: 1rem 0;
+}
+.weui-input{
+  margin:0 1rem;
+}
+.submitSave{
+  margin: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: .5rem;
+  background: lightseagreen;
+  line-height: 3rem;
+}

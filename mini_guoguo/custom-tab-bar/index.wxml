@@ -1,0 +1,39 @@
+<!-- 底部导航栏总体 -->
+<cover-view class='tab-bar'>
+<!-- 首页 -->
+ <cover-view class='tab-bar-index' data-index='0' data-path='{{list[0].pagePath}}' bindtap='tab_bar_index'>
+      <cover-view class='tab-bar-icon'>
+        <cover-image style="margin-top:5rpx;" src='{{selected == 0 ? list[0].selectedIconPath : list[0].iconPath}}' class='tab-bar-img'/>
+        <cover-view class='tab-bar-text' style='color:{{selected == 0 ? selectedColor : color}}'>首页</cover-view>
+      </cover-view>
+    </cover-view>
+
+
+    <!-- 驿站 -->
+    <cover-view class='tab-bar-index' data-index='1' data-path='{{list[1].pagePath}}' bindtap='tab_bar_index'>
+      <cover-view class='tab-bar-icon'>
+        <cover-image style="width:50rpx;height:50rpx;margin-top:-5rpx;" src='{{selected == 1 ? list[1].selectedIconPath : list[1].iconPath}}' class='tab-bar-img'/>
+        <cover-view class='tab-bar-text' style='color:{{selected == 1 ? selectedColor : color}}'>驿站</cover-view>
+      </cover-view>
+    </cover-view>
+
+  <!-- 我的 -->
+      <cover-view class='tab-bar-index' data-index='2' data-path='{{list[2].pagePath}}' bindtap='tab_bar_index'>
+        <cover-view class='tab-bar-icon'>
+          <cover-image style="margin-top:2rpx;" src='{{selected == 2 ? list[2].selectedIconPath : list[2].iconPath}}' class='tab-bar-img'/>
+          <cover-view class='tab-bar-text'  style='color:{{selected == 2 ? selectedColor : color}}'>我的</cover-view>
+        </cover-view>
+      </cover-view>
+      <!-- 这个没有作用，用来解决bug -->
+      <cover-view class='tab-bar-index'></cover-view>
+</cover-view>
+
+<!-- 客服 -->
+    <cover-view class='tab-bar-index-add' bindtap='tab_bar_add'>
+      <cover-view class='tab-bar-icon_add'>
+        <cover-image class='tab-bar-img-add' src='{{addImgPath}}'/>
+        <cover-view class='tab-bar-text4'>在线客服</cover-view>
+      </cover-view>
+    </cover-view>
+
+  

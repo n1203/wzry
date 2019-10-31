@@ -1,0 +1,64 @@
+
+.detail-main{
+	width:100%;
+  position:absolute;
+  z-index:0;
+  padding-bottom: 10rem;
+}
+.main-status{
+	margin:24rpx auto;
+  background:white;
+	width:84.51%;
+	height:100%;
+	display: flex;
+	flex-direction:column ;
+	border-radius: 19.6rpx;
+}
+.status-img{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top:3.33%;
+  padding-bottom:3.33%;
+}
+.img-text{
+	display: flex;
+	flex-direction: column;
+	margin-left: 4.5%;
+	font-size:32rpx;
+  width:350rpx;
+}
+.text-address{
+  width:350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.img-yunda{
+	width:20.4%;
+	height:0;
+	padding-bottom:20.4%;
+}
+.img-yunda image{
+	width:100%;
+	height:100%;
+}
+.receive-xi{
+	color:#999999;
+	font-size:29.4rpx;
+}
+.receive-jie{
+	color:#27A4FF;
+	font-size:36.75rpx;
+}
+.main-adv{
+	width:84.51%;
+	height:221.73rpx;
+	border-radius:14rpx;
+	margin:0 auto;
+}
+.swiperMain{
+	height:221.73rpx;
+	border-radius:14rpx;
+	overflow: hidden;
+}

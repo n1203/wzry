@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+<view class='appInfo'>
+<image style='height:100px;width:100px' src='http://yun1.e-spy.cn/APP%20ICON.jpg'></image>
+<view>景院裹裹</view>
+</view>
+  <view class="usermotto">
+    <text class="user-motto">该程序将获取以下授权</text>
+    <view >获取您的公开信息（昵称、头像等）</view>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" style='background:#27a4ff;width:250px;color:#FFF;' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录景院裹裹小程序 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
