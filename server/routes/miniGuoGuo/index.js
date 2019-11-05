@@ -68,8 +68,15 @@ module.exports = app => {
         res.send(model)
     })
     // 订单状态更新
-    router.put('/userOrders/:id', qusers.checkToken, async (req, res) => {
-        const model = await Order.findByIdAndUpdate(req.params.id, req.body)
+    // router.put('/userOrders/:id', qusers.checkToken, async (req, res) => {
+    //     const model = await Order.findByIdAndUpdate(req.params.id, req.body)
+    //     console.log(model)
+    //     res.send(model)
+    // })
+    // 订单状态更新
+    router.post('/userOrderUpdate', qusers.checkToken, async (req, res) => {
+        console.log(req.body)
+        const model = await Order.findByIdAndUpdate(req.body.id, req.body)
         console.log(model)
         res.send(model)
     })

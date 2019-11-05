@@ -16,6 +16,7 @@ import HeroList from './views/HeroList.vue'
 import HeroEdit from './views/HeroEdit.vue'
 // 景院裹裹
 import GuoSystem from './views/GuoGuo/SystemEdit'
+import GuoSystemList from './views/GuoGuo/SystemList'
 import OrderList from './views/GuoGuo/OrderList'
 import OrderEdit from './views/GuoGuo/OrderEdit'
 import PostermanList from './views/GuoGuo/PostermanList'
@@ -52,9 +53,11 @@ export default new Router({
         { path: '/users/edit/:id', component: UserEdit, props: true },
 
         { path: '/prints', component: PrintList },
-        { path: '/systems/edit', component: systemEdit },
+        { path: '/systems/edit/:id', component: systemEdit },
         // 景院裹裹
         // 系统设置
+        { path: '/guosystems/edit/:id', component: GuoSystem, props: true },
+        { path: '/guosystems/list', component: GuoSystemList },
         { path: '/guosystems/edit', component: GuoSystem },
         // 裹派列表
         { path: '/guomans/list', component: PostermanList },

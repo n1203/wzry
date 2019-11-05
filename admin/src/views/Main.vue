@@ -62,6 +62,7 @@
           <el-menu-item-group>
             <template slot="title">系统设置</template>
             <el-menu-item index="/guosystems/edit">系统设置</el-menu-item>
+            <el-menu-item index="/guosystems/list">系统设置列表</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group>
             <template slot="title">裹裹</template>

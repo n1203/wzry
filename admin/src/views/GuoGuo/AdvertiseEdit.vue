@@ -5,10 +5,6 @@
       <el-form-item label="广告名称">
         <el-input v-model="model.name"></el-input>
       </el-form-item>
-
-      <el-form-item label="广告指向URL">
-        <el-input v-model="model.url"></el-input>
-      </el-form-item>
       <el-form-item label="广告图片">
         <el-upload
           class="avatar-uploader"
@@ -17,6 +13,17 @@
           :on-success="afterUpload"
         >
           <img v-if="model.banner" :src="model.banner" class="avatar" />
+          <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+        </el-upload>
+      </el-form-item>
+      <el-form-item label="广告指向详情图片">
+        <el-upload
+          class="avatar-uploader"
+          :action="$http.defaults.baseURL + '/upload'"
+          :show-file-list="false"
+          :on-success="afterUpload2"
+        >
+          <img v-if="model.url" :src="model.url" class="avatar" />
           <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
       </el-form-item>
@@ -45,6 +52,9 @@ export default {
   methods: {
     afterUpload(res) {
       this.$set(this.model, "banner", res.url);
+    },
+    afterUpload2(res) {
+      this.$set(this.model, "url", res.url);
     },
     async save() {
       let res;
